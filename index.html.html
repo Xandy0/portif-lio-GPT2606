@@ -1,0 +1,443 @@
+<!DOCTYPE html><html class="dark" lang="pt-br"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Alexandre de Carvalho da Silva Júnior | Data Systems Professional</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@400;500&amp;family=Inter:wght@400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed": "#001f29",
+                        "surface-container-low": "#131b2e",
+                        "on-tertiary-fixed-variant": "#3a485c",
+                        "on-surface-variant": "#bbc8d0",
+                        "on-tertiary": "#233144",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "secondary-fixed": "#d8e3fb",
+                        "on-primary-fixed-variant": "#004d63",
+                        "outline": "#869399",
+                        "surface-sidebar": "#2F3236",
+                        "on-background": "#dae2fd",
+                        "secondary-container": "#3e495d",
+                        "tertiary": "#cad9f2",
+                        "inverse-surface": "#dae2fd",
+                        "tertiary-fixed-dim": "#b9c7e0",
+                        "highlight-cyan": "#00CCFF",
+                        "error": "#ffb4ab",
+                        "outline-variant": "#3c494e",
+                        "on-tertiary-fixed": "#0d1c2f",
+                        "on-tertiary-container": "#3e4c61",
+                        "on-surface": "#dae2fd",
+                        "text-secondary-dark": "#94A3B8",
+                        "primary-fixed-dim": "#5ed4ff",
+                        "inverse-primary": "#006782",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "on-primary": "#003545",
+                        "primary-fixed": "#bbe9ff",
+                        "secondary": "#bcc7de",
+                        "surface-dim": "#0b1326",
+                        "on-secondary-fixed": "#111c2d",
+                        "inverse-on-surface": "#283044",
+                        "text-primary-light": "#F8FAFC",
+                        "on-primary-container": "#005369",
+                        "on-secondary": "#263143",
+                        "surface-container": "#171f33",
+                        "on-secondary-container": "#aeb9d0",
+                        "tertiary-container": "#afbdd6",
+                        "surface-container-lowest": "#060e20",
+                        "secondary-fixed-dim": "#bcc7de",
+                        "surface": "#0b1326",
+                        "primary-container": "#00ccff",
+                        "tertiary-fixed": "#d5e3fd",
+                        "on-error-container": "#ffdad6",
+                        "surface-variant": "#2d3449",
+                        "surface-bright": "#31394d",
+                        "surface-tint": "#5ed4ff",
+                        "surface-container-highest": "#2d3449",
+                        "primary": "#9de2ff",
+                        "background": "#0b1326",
+                        "surface-container-high": "#222a3d"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "stack-md": "16px",
+                        "stack-sm": "8px",
+                        "container-max": "1200px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "sidebar-width": "280px",
+                        "margin-desktop": "48px",
+                        "stack-lg": "32px"
+                    },
+                    fontFamily: {
+                        "headline-lg": ["Hanken Grotesk"],
+                        "label-sm": ["JetBrains Mono"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "label-md": ["JetBrains Mono"],
+                        "body-md": ["Inter"]
+                    },
+                    fontSize: {
+                        "headline-lg": ["32px", { lineHeight: "1.2", fontWeight: "700" }],
+                        "label-sm": ["12px", { lineHeight: "1.4", fontWeight: "400" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "600" }],
+                        "display-lg": ["48px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "800" }],
+                        "headline-lg-mobile": ["24px", { lineHeight: "1.2", fontWeight: "700" }],
+                        "label-md": ["14px", { lineHeight: "1.4", letterSpacing: "0.05em", fontWeight: "500" }],
+                        "body-md": ["16px", { lineHeight: "1.5", fontWeight: "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        .ghost-border {
+            border: 1px solid #334155;
+        }
+        .glass {
+            background: rgba(11, 19, 38, 0.8);
+            backdrop-filter: blur(12px);
+        }
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant shadow-sm h-16">
+<div class="flex justify-between items-center px-4 md:px-margin-desktop h-full max-w-container-max mx-auto">
+<span class="text-headline-md font-headline-md font-bold text-highlight-cyan tracking-tighter">ADCSJ</span>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-highlight-cyan transition-colors active:scale-95" href="#about">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-highlight-cyan transition-colors active:scale-95" href="#experience">Experience</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-highlight-cyan transition-colors active:scale-95" href="#education">Education</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-highlight-cyan transition-colors active:scale-95" href="#skills">Skills</a>
+<a class="bg-highlight-cyan text-on-primary-fixed px-6 py-2 rounded-lg font-label-md text-label-md font-bold active:scale-95 transition-transform" href="#contact">Contact</a>
+</div>
+<!-- Mobile Menu Trigger (Simple icon for visual placeholder) -->
+<button class="md:hidden text-highlight-cyan">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="mt-16">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max mx-auto" id="about">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-8 z-10">
+<h1 class="font-display-lg text-display-lg text-text-primary-light mb-stack-sm leading-none">
+                        Alexandre de Carvalho <br class="hidden md:block">
+                        da Silva <span class="text-highlight-cyan">Júnior</span>
+</h1>
+<p class="font-headline-md text-headline-md text-highlight-cyan mb-stack-md">Data Systems Professional | Systems Analyst</p>
+<div class="max-w-2xl">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                            Profissional de tecnologia com sólida formação em <span class="text-text-primary-light font-bold">Análise e Desenvolvimento de Sistemas</span>. Experiência prática em suporte especializado a desenvolvedores, análise de dados e treinamento de modelos de Inteligência Artificial. Domínio de ferramentas modernas para transformar dados em insights estratégicos.
+                        </p>
+</div>
+<div class="mt-stack-lg flex flex-wrap gap-stack-md">
+<a class="bg-highlight-cyan text-on-primary-fixed px-8 py-4 rounded-lg font-label-md text-label-md font-bold uppercase tracking-wider hover:brightness-110 transition-all" href="#contact">Contrate-me</a>
+<button class="ghost-border text-highlight-cyan px-8 py-4 rounded-lg font-label-md text-label-md font-bold uppercase tracking-wider hover:bg-highlight-cyan/10 transition-all">Download CV</button>
+</div>
+</div>
+<div class="lg:col-span-4 relative">
+<div class="aspect-square rounded-2xl overflow-hidden ghost-border shadow-2xl relative">
+<img class="w-full h-full object-cover transition-all duration-500" data-alt="A cinematic studio portrait of a modern developer named Alexandre, illuminated by subtle cyan neon backlighting against a dark slate technological background. He wears a clean, professional dark shirt, looking confident and approachable. The aesthetic is high-end corporate meets futuristic tech, with sharp focus and shallow depth of field, reflecting a Data Systems Professional persona." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdm7eWMHLGysR2Vc52JcO38F9jxYHd5ko8hBlnBeM0AszDTXnK7EZa2i9c6DiweZM6RsLbeXx755x3A-wAhpoBWglxypCjaugYn4Ekl43_zceDg0ilTPCPt56Tc8aCDFg5l8Z2M3JMVqX03CjXpdfgTTCh5cM15nbx-qMi7cPwf-bQ7WJz0Qq_E1qjc-9IEfLstOKd2nUN1qQqJD6QmqstumMB2p4cT_BDtX7NICpwHZMm5IAcYQwFxgAGOlrTfP9-6w9T_j1wnSAF">
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Professional Experience Section -->
+<section class="bg-surface-container-low py-20 px-margin-mobile md:px-margin-desktop border-y border-outline-variant" id="experience">
+<div class="max-w-container-max mx-auto">
+<div class="flex items-center gap-stack-md mb-12">
+<h2 class="font-headline-lg text-headline-lg text-text-primary-light">Experiência Profissional</h2>
+<div class="h-px bg-outline-variant flex-grow"></div>
+</div>
+<div class="relative border-l border-outline-variant ml-4 md:ml-0 pl-10 space-y-16">
+<!-- Job 1 -->
+<div class="relative">
+<div class="absolute -left-[53px] top-0 w-6 h-6 rounded-full bg-highlight-cyan shadow-[0_0_15px_rgba(0,204,255,0.6)]"></div>
+<div class="bg-surface p-stack-lg rounded-xl ghost-border hover:border-highlight-cyan transition-colors">
+<div class="flex flex-col md:flex-row justify-between mb-4">
+<h3 class="font-headline-md text-headline-md text-text-primary-light">Agente de Atendimento L2</h3>
+<span class="font-label-sm text-label-sm text-highlight-cyan bg-highlight-cyan/10 px-3 py-1 rounded-full h-fit">Atual</span>
+</div>
+<p class="font-label-md text-label-md text-on-tertiary-container mb-stack-md">Suporte ao Desenvolvedor</p>
+<ul class="space-y-3 text-on-surface-variant font-body-md">
+<li class="flex gap-3">
+<span class="text-highlight-cyan">•</span>
+<span class="">Prestação de suporte técnico especializado a desenvolvedores com análise e diagnóstico de falhas em sistemas e APIs.</span>
+</li>
+<li class="flex gap-3">
+<span class="text-highlight-cyan">•</span>
+<span class="">Identificação de padrões de incidentes e proposição de melhorias de processo, reduzindo reincidências.</span>
+</li>
+<li class="flex gap-3">
+<span class="text-highlight-cyan">•</span>
+<span class="">Colaboração direta com equipes de engenharia para escalonamento e resolução de bugs críticos.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Job 2 -->
+<div class="relative">
+<div class="absolute -left-[53px] top-0 w-6 h-6 rounded-full bg-outline-variant"></div>
+<div class="bg-surface p-stack-lg rounded-xl ghost-border hover:border-highlight-cyan transition-colors">
+<div class="flex flex-col md:flex-row justify-between mb-4">
+<h3 class="font-headline-md text-headline-md text-text-primary-light">Agente de Back Office L3</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Inteligência Artificial</span>
+</div>
+<p class="font-label-md text-label-md text-on-tertiary-container mb-stack-md">Curadoria de Dados para IA</p>
+<ul class="space-y-3 text-on-surface-variant font-body-md">
+<li class="flex gap-3">
+<span class="text-highlight-cyan">•</span>
+<span class="">Validação e curadoria de conteúdos gerados por modelos de IA generativa, garantindo qualidade e segurança.</span>
+</li>
+<li class="flex gap-3">
+<span class="text-highlight-cyan">•</span>
+<span class="">Participação ativa no ciclo de treinamento de modelos de linguagem (LLMs): anotação, classificação e RLHF.</span>
+</li>
+<li class="flex gap-3">
+<span class="text-highlight-cyan">•</span>
+<span class="">Análise de dados para identificação de vieses e inconsistências em datasets complexos.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills & Bento Grid -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="skills">
+<div class="flex flex-col md:flex-row items-baseline gap-stack-md mb-16">
+<h2 class="font-headline-lg text-headline-lg text-text-primary-light">Habilidades Técnicas</h2>
+<span class="font-label-sm text-label-sm text-highlight-cyan uppercase tracking-widest">Stack Tecnológica</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Data Card -->
+<div class="md:col-span-2 bg-surface-container-high p-8 rounded-2xl ghost-border flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-4xl text-highlight-cyan mb-4" data-icon="database">database</span>
+<h3 class="font-headline-md text-headline-md mb-4">Data Analytics</h3>
+<p class="text-on-surface-variant mb-6">Expertise em extração, limpeza e modelagem de dados para tomada de decisão.</p>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-highlight-cyan/10 border border-highlight-cyan/20 px-3 py-1 rounded text-highlight-cyan font-label-sm">SQL</span>
+<span class="bg-highlight-cyan/10 border border-highlight-cyan/20 px-3 py-1 rounded text-highlight-cyan font-label-sm">Python</span>
+<span class="bg-highlight-cyan/10 border border-highlight-cyan/20 px-3 py-1 rounded text-highlight-cyan font-label-sm">Power BI</span>
+<span class="bg-highlight-cyan/10 border border-highlight-cyan/20 px-3 py-1 rounded text-highlight-cyan font-label-sm">Pandas</span>
+</div>
+</div>
+<!-- Cloud Card -->
+<div class="bg-surface-container-high p-8 rounded-2xl ghost-border">
+<span class="material-symbols-outlined text-4xl text-highlight-cyan mb-4" data-icon="cloud">cloud</span>
+<h4 class="font-headline-md text-headline-md mb-2">Cloud</h4>
+<p class="text-on-surface-variant font-body-md">Google Cloud Platform &amp; Infraestrutura.</p>
+</div>
+<!-- AI Card -->
+<div class="bg-surface-container-high p-8 rounded-2xl ghost-border">
+<span class="material-symbols-outlined text-4xl text-highlight-cyan mb-4" data-icon="psychology">psychology</span>
+<h4 class="font-headline-md text-headline-md mb-2">IA &amp; ML</h4>
+<p class="text-on-surface-variant font-body-md">LLMs, NLP e Visão Computacional.</p>
+</div>
+<!-- Soft Skills -->
+<div class="md:col-span-4 bg-surface-container-lowest p-8 rounded-2xl ghost-border grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-highlight-cyan" data-icon="terminal">terminal</span>
+<div>
+<h5 class="font-bold mb-1">Dev Support</h5>
+<p class="text-sm text-on-surface-variant">Diagnóstico profundo de APIs e sistemas backend.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-highlight-cyan" data-icon="description">description</span>
+<div>
+<h5 class="font-bold mb-1">Documentação</h5>
+<p class="text-sm text-on-surface-variant">Escrita técnica clara para bases de conhecimento.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-highlight-cyan" data-icon="group">group</span>
+<div>
+<h5 class="font-bold mb-1">Colaboração</h5>
+<p class="text-sm text-on-surface-variant">Interface entre times de suporte e engenharia.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Education & Certifications Section -->
+<section class="py-20 bg-surface-container px-margin-mobile md:px-margin-desktop" id="education">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<!-- Academic -->
+<div>
+<h2 class="font-headline-lg text-headline-lg text-text-primary-light mb-10 flex items-center gap-4">
+<span class="material-symbols-outlined text-highlight-cyan" data-icon="school">school</span>
+                            Formação Acadêmica
+                        </h2>
+<div class="space-y-8">
+<div class="relative pl-6 border-l-2 border-highlight-cyan">
+<h4 class="text-xl font-bold text-text-primary-light">Análise e Desenvolvimento de Sistemas</h4>
+<p class="text-highlight-cyan">UNIP - Universidade Paulista</p>
+<p class="text-on-surface-variant mt-2">Graduação Superior com foco em lógica de programação, arquitetura de sistemas e engenharia de software.</p>
+</div>
+<div class="relative pl-6 border-l-2 border-outline-variant">
+<h4 class="text-xl font-bold text-text-primary-light">Técnico em Eletrônica</h4>
+<p class="text-on-surface-variant">ETEC - Escola Técnica Estadual</p>
+<p class="text-on-surface-variant mt-2">Fundamentos de hardware, sistemas embarcados e circuitos digitais.</p>
+</div>
+</div>
+</div>
+<!-- Certifications -->
+<div>
+<h2 class="font-headline-lg text-headline-lg text-text-primary-light mb-10 flex items-center gap-4">
+<span class="material-symbols-outlined text-highlight-cyan" data-icon="workspace_premium">workspace_premium</span>
+                            Certificações
+                        </h2>
+<div class="bg-surface-container-high p-6 rounded-xl ghost-border border-l-4 border-l-highlight-cyan">
+<h4 class="text-xl font-bold text-text-primary-light">Ioasys Camp - Trilha de Dados</h4>
+<p class="text-highlight-cyan mb-3">Bootcamp Intensivo</p>
+<p class="text-on-surface-variant">Imersão em ferramentas de análise de dados, ETL, visualização estratégica e fundamentos de estatística aplicada.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop text-center" id="contact">
+<div class="max-w-3xl mx-auto">
+<h2 class="font-display-lg text-display-lg text-text-primary-light mb-6">Vamos Construir o <span class="text-highlight-cyan">Futuro</span> dos Seus Dados?</h2>
+<p class="text-body-lg text-on-surface-variant mb-12">Estou disponível para novos desafios em Ciência de Dados, Análise de Sistemas e Backend.</p>
+<div class="flex flex-col md:flex-row justify-center gap-6 mb-12">
+<div class="bg-surface-container-high p-6 rounded-xl ghost-border flex items-center gap-4 text-left flex-1">
+<span class="material-symbols-outlined text-3xl text-highlight-cyan" data-icon="mail">mail</span>
+<div>
+<p class="text-xs text-on-surface-variant font-label-sm">EMAIL</p>
+<p class="font-bold">acsjr.2003@gmail.com</p>
+</div>
+</div>
+<div class="bg-surface-container-high p-6 rounded-xl ghost-border flex items-center gap-4 text-left flex-1">
+<span class="material-symbols-outlined text-3xl text-highlight-cyan" data-icon="call">call</span>
+<div>
+<p class="text-xs text-on-surface-variant font-label-sm">TELEFONE</p>
+<p class="font-bold">(11) 96662-8842</p>
+</div>
+</div>
+</div>
+<div class="flex justify-center gap-4">
+<a class="bg-highlight-cyan text-on-primary-fixed px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform" href="mailto:acsjr.2003@gmail.com">Enviar Mensagem</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg bg-surface-container-lowest border-t border-outline-variant mt-10">
+<div class="flex flex-col md:flex-row justify-between items-center px-4 md:px-margin-desktop max-w-container-max mx-auto gap-stack-md">
+<div class="flex flex-col items-center md:items-start">
+<span class="font-label-md font-bold text-on-surface">ADCSJ</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-2 text-center md:text-left">© 2024 Alexandre de Carvalho da Silva Júnior. <br class="md:hidden"> Built for Data Systems.</p>
+</div>
+<div class="flex items-center gap-stack-md">
+<a class="text-on-surface-variant hover:text-highlight-cyan transition-colors" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-highlight-cyan transition-colors" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-highlight-cyan transition-colors" href="#">Stack Overflow</a>
+<a class="text-highlight-cyan underline" href="#">Resume</a>
+</div>
+</div>
+</footer>
+<!-- SideNavBar (Hidden for Web Layout based on mandate but implemented as reference) -->
+<aside class="hidden lg:flex flex-col p-6 gap-stack-lg fixed left-0 top-0 h-full w-sidebar-width bg-surface-sidebar border-r border-outline-variant z-40 transform -translate-x-full transition-transform duration-300" id="sidebar-drawer">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="A small, stylized profile icon representation for Alexandre de Carvalho da Silva Junior, focused on a modern digital avatar style using electric cyan accents and dark slate tones, perfect for a technical dashboard sidebar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8qCEbup3eimFsxd5UBuvQ_7uGMpEIhTpzOYXKzc3XH4cJAC9v9amKUj6nvJXgpjghsmWFQg5A5MRGn14_3iiGK1RcoxJGTIyffQQ-WJNCv_gGTFKU4WMbU2QD7M8oNOaV_RDzcIWZIKbNRowf5XBnBSMv70aQrVGaeBytKfNJS1ZLGSlGAE0U6A-AS_dhVe0tuypTs_i3Q17lXFmRYItH3uZBptvMsO9bQjKKUb3VCj-bLwVOQuWtRr-E6zVXnCyr65p4wG1bFciT">
+</div>
+<div>
+<p class="font-bold text-highlight-cyan">Alexandre</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Data Specialist</p>
+</div>
+</div>
+<nav class="flex-grow space-y-2">
+<a class="flex items-center gap-stack-md bg-secondary-container text-highlight-cyan px-4 py-3 rounded-lg active:opacity-80" href="#about">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-label-md">About</span>
+</a>
+<a class="flex items-center gap-stack-md text-on-surface-variant px-4 py-3 hover:bg-surface-variant rounded-lg transition-colors" href="#experience">
+<span class="material-symbols-outlined">work</span>
+<span class="font-label-md text-label-md">Experience</span>
+</a>
+<a class="flex items-center gap-stack-md text-on-surface-variant px-4 py-3 hover:bg-surface-variant rounded-lg transition-colors" href="#education">
+<span class="material-symbols-outlined">school</span>
+<span class="font-label-md text-label-md">Education</span>
+</a>
+<a class="flex items-center gap-stack-md text-on-surface-variant px-4 py-3 hover:bg-surface-variant rounded-lg transition-colors" href="#skills">
+<span class="material-symbols-outlined">terminal</span>
+<span class="font-label-md text-label-md">Skills</span>
+</a>
+</nav>
+<button class="bg-highlight-cyan text-on-primary-fixed py-3 rounded-lg font-bold">Download CV</button>
+<div class="mt-auto pt-6 border-t border-outline-variant">
+<a class="flex items-center gap-stack-md text-on-surface-variant px-4 py-2 hover:bg-surface-variant rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md">Settings</span>
+</a>
+</div>
+</aside>
+<script>
+        // Simple scroll behavior for active links
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav div a');
+            
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-highlight-cyan', 'border-b-2', 'border-highlight-cyan', 'pb-1');
+                link.classList.add('text-on-surface-variant');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('text-highlight-cyan', 'border-b-2', 'border-highlight-cyan', 'pb-1');
+                    link.classList.remove('text-on-surface-variant');
+                }
+            });
+        });
+
+        // Toggle Sidebar Mock logic
+        document.querySelector('nav button').addEventListener('click', () => {
+            const sidebar = document.getElementById('sidebar-drawer');
+            sidebar.classList.toggle('hidden');
+            sidebar.classList.toggle('-translate-x-full');
+            sidebar.classList.toggle('translate-x-0');
+        });
+    </script>
+
+
+</body></html>
